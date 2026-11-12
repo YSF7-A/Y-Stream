@@ -24,8 +24,8 @@ jobs:
           cache: 'gradle'
 
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Grant missing Gradle Wrapper
+        run: gradle wrapper
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
